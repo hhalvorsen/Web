@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8" /> <!-- Norske bokstaver -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Ord-generator </title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+	</head>
+
+
+	<body>
+		
+		
+		
+		<div class="grid-container">
+			<div class="item1"> <label> Generer tilfeldige ord </label> </div>
+			<button class="item2" type="button" id="nyttOrdKnapp" onclick="genererOrd()">Nytt ord</button>
+			<button class="item3" type="button" id="nedtellingKnapp" onclick="startNedtelling()">Start nedtelling</button>
+			<div class="item4" id="word"> <label id="ord"></label> </div>
+			<div class="item5" id="countdownClock"> <input id="min" value="1" type="number" min="0" max="59" maxlength="2"> </input> <span class="clockp"> : </span> <input type="number" value="0" id="sec" min="0" max="59" maxlength="2"> </input> </div>
+			<button class="item6" type="button" id="lagreKnapp" onclick="lagreOrd()">Tell ord</button>
+			<button class="item7" type="button" id="glemKnapp" onclick="glemOrd()">Hopp over ord</button>
+			<div class="item8" id="tellp"> </div>
+			<div class="item9" id="glemp"> </div>
+		</div>
+		
+		<p id="ekstraTekst"> norske ord generator ordgenerator generer alias spill aliasord aliasspill </p>
+
+	</body>
+
+		<script type="text/javascript" src="wordList.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+
+</html>

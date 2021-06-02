@@ -1,0 +1,132 @@
+body {
+	margin: 10px;
+	background-color: lightsteelblue;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+button {
+	border-style: solid;
+	outline: none; 
+	border-radius: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 20px;
+  
+}
+
+
+#nyttOrdKnapp {
+	background-color: deepskyblue;
+	border-color: deepskyblue;
+}
+
+#nedtellingKnapp {
+	background-color: cornsilk;
+	border-color: cornsilk;
+}
+
+#word {
+	background-color: white;
+	border-style: solid;
+	border-color: black;
+}
+
+#lagreKnapp{
+	background-color: lightgreen;
+	border-color: lightgreen;
+}
+
+#glemKnapp{
+	background-color: lightcoral;
+	border-color: lightcoral;
+}
+
+#tellp {
+	visibility: hidden;
+}
+
+#glemp {
+	visibility: hidden;
+}
+
+#ekstraTekst {
+	background-color: lightsteelblue;
+	color: lightsteelblue;
+}
+
+input {
+	border-radius: 10px;
+	border-style: solid;
+	border-color: black;
+	width: 20%;
+	text-align: right;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.clockp {
+	font-size: 20px;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: generate; }
+.item3 { grid-area: countdown; }
+.item4 { grid-area: word; }
+.item5 { grid-area: clock; }
+.item6 { grid-area: count; }
+.item7 { grid-area: forget; }
+.item8 { grid-area: countedWords; }
+.item9 { grid-area: forgottenWords; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'generate countdown'
+    'word clock'
+	'count forget'
+	'countedWords forgottenWords';
+  grid-gap: 10px;
+  background-color: lightsteelblue;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  border-radius: 10px;
+	font-weight: bold;
+	border-width: medium;
+	text-align: center;
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:700px) {
+	 .grid-container {
+	  display: grid;
+	  grid-template-areas:
+		'header'
+		'generate'
+		'word'
+		'countdown'
+		'clock'
+		'count' 
+		'forget'
+		'countedWords' 
+		'forgottenWords';
+	  grid-gap: 5px;
+	  background-color: lightsteelblue;
+	  padding: 5px;
+	}
+	.grid-container > div {
+		padding: 15px;
+		font-size: 20px;
+	}
+	.grid-container > button {
+		padding: 15px;
+		font-size: 20px;
+	}
+}
